@@ -3,13 +3,15 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     let textCount = document.querySelector('#text-count');
+    let minValue = 0;
     let number = 5;
+    let maxValue = 10;
     updateNumber();
     
     //Funktion plusknap
     var btn = document.getElementById('btn-count-increase');
     btn.addEventListener('click', () => {
-        if(number < 10){
+        if(number < maxValue){
         number++;
         updateNumber();
 }});
@@ -17,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //Funktion minusknap
     var btnM = document.getElementById('btn-count-decrease');
     btnM.addEventListener('click', () => {
-        if(number > 0){
+        if(number > minValue){
         number--;
         updateNumber();
 }});
